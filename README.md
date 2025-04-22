@@ -46,22 +46,36 @@ To set up the Generative AI Catalogue Site locally, follow these steps:
    cd ai-catalogue-site
    ```
 
-2. **Install Jekyll**:
-   Make sure you have Ruby and Bundler installed, then run:
+2. **Install Jekyll and Dependencies**:
+   Make sure you have Ruby installed (version 2.5.0 or higher), then run:
    ```
-   gem install jekyll bundler
-   ```
-
-3. **Install Dependencies**:
-   ```
+   gem install bundler
    bundle install
    ```
 
-4. **Run the Site**:
+3. **Run the Site Locally**:
    ```
    bundle exec jekyll serve
    ```
    Open your browser and go to `http://localhost:4000` to view the site.
+
+## Deploying to GitHub Pages
+
+1. Push your changes to your GitHub repository:
+   ```
+   git add .
+   git commit -m "Update site content"
+   git push origin main
+   ```
+
+2. Configure your repository for GitHub Pages:
+   - Go to your repository on GitHub
+   - Navigate to Settings > Pages
+   - Select the branch you want to deploy (usually main)
+   - Choose the root directory (/ or /docs depending on your setup)
+   - Click Save
+
+GitHub will automatically build and deploy your site, usually within a few minutes.
 
 ## Contributing
 

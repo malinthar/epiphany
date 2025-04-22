@@ -1,0 +1,14 @@
+# Jekyll site generated files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+# Ignore bundler config
+.bundle/
+vendor/
+
+# Environment normalization
+.DS_Store
+.env
+.env.*
+*.log
