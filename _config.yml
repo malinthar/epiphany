@@ -49,10 +49,10 @@ plugins:
 paginate: 6
 paginate_path: "/blog/page:num/"
 
-# Other settings
-sass:
-  sass_dir: _sass
-  style: compressed
+# Comment out or remove SASS configuration since we're using plain CSS
+# sass:
+#   sass_dir: _sass
+#   style: compressed
 
 # Don't exclude these directories - GitHub Pages needs them
 exclude:
