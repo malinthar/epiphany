@@ -1,7 +1,7 @@
 title: AI Catalogue
 description: A comprehensive catalogue of AI buzzwords and topics, simplified for easy understanding.
 baseurl: ""
-url: "https://github.malinthar.com"
+url: "https://github.malinthar.com" # Replace with your actual domain
 twitter_username: malintharanasi1
 github_username: malinthar
 
@@ -44,7 +44,6 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate
 
 # Pagination settings
 paginate: 6
@@ -54,3 +53,14 @@ paginate_path: "/blog/page:num/"
 sass:
   sass_dir: _sass
   style: compressed
+
+# Don't exclude these directories - GitHub Pages needs them
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
