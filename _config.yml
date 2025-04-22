@@ -1,0 +1,56 @@
+title: AI Catalogue
+description: A comprehensive catalogue of AI buzzwords and topics, simplified for easy understanding.
+baseurl: ""
+url: "https://github.malinthar.com"
+twitter_username: malintharanasi1
+github_username: malinthar
+
+# Theme settings
+theme: minima
+markdown: kramdown
+
+# Collections for organizing AI topics
+collections:
+  topics:
+    output: true
+    permalink: /topics/:path/
+  categories:
+    output: true
+    permalink: /categories/:path/
+
+# Default layouts for different content types
+defaults:
+  - scope:
+      path: ""
+      type: "topics"
+    values:
+      layout: "topic"
+  - scope:
+      path: ""
+      type: "categories"
+    values:
+      layout: "category"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Pagination settings
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+# Other settings
+sass:
+  sass_dir: _sass
+  style: compressed

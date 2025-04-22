@@ -1,0 +1,21 @@
+- topics:
+    - name: Machine Learning
+      description: A subset of AI focused on algorithms and statistical models that enable computers to perform tasks without explicit instructions.
+    - name: Deep Learning
+      description: A class of machine learning based on artificial neural networks with representation learning.
+    - name: Natural Language Processing
+      description: The ability of a computer program to understand human language as it is spoken or written.
+    - name: Computer Vision
+      description: A field of AI that enables computers to interpret and make decisions based on visual data from the world.
+    - name: Reinforcement Learning
+      description: A type of machine learning where an agent learns to make decisions by taking actions in an environment to maximize cumulative reward.
+    - name: Neural Networks
+      description: Computing systems inspired by the biological neural networks that constitute animal brains.
+    - name: Generative Adversarial Networks (GANs)
+      description: A class of machine learning frameworks where two neural networks contest with each other to generate new data instances.
+    - name: Explainable AI (XAI)
+      description: Methods and techniques in AI that make the results of the solution understandable by humans.
+    - name: Robotics
+      description: The branch of technology that deals with the design, construction, operation, and application of robots.
+    - name: AI Ethics
+      description: The field of study that examines the moral implications and responsibilities of AI technologies.

@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div class="topic-container">
+  <div class="container">
+    <nav class="breadcrumbs">
+      <a href="{{ '/' | relative_url }}">Home</a> &rsaquo;
+      <a href="{{ '/topics/' | relative_url }}">Topics</a> &rsaquo;
+      <span>{{ page.title }}</span>
+    </nav>
+
+    <article class="topic">
+      <header class="topic-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.categories %}
+        <div class="topic-categories">
+          {% for cat in page.categories %}
+            <a href="{{ '/categories/' | append: cat | relative_url }}" class="topic-category">{{ cat }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </header>
+
+      <div class="topic-content">
+        {{ content }}
+      </div>
+
+      {% if page.related_topics %}
+      <div class="related-topics">
+        <h3>Related Topics</h3>
+        <ul>
+          {% for topic_slug in page.related_topics %}
+            {% assign related = site.topics | where: "slug", topic_slug | first %}
+            {% if related %}
+            <li><a href="{{ related.url | relative_url }}">{{ related.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </article>
+  </div>
+</div>

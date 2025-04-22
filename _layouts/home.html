@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>{{ site.title }}</h1>
+    <p class="lead">{{ site.description }}</p>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search AI topics...">
+      <button type="button"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+</section>
+
+<section class="categories">
+  <div class="container">
+    <h2>AI Categories</h2>
+    <div class="category-grid">
+      {% for category in site.categories %}
+        <a href="{{ category.url | relative_url }}" class="category-card">
+          <div class="category-icon"><i class="fas fa-{{ category.icon | default: 'robot' }}"></i></div>
+          <h3>{{ category.title }}</h3>
+          <p>{{ category.description | truncate: 100 }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="featured-topics">
+  <div class="container">
+    <h2>Popular AI Topics</h2>
+    <div class="topics-grid">
+      {% assign featured_topics = site.topics | where: "featured", true | limit: 6 %}
+      {% for topic in featured_topics %}
+        <a href="{{ topic.url | relative_url }}" class="topic-card">
+          <h3>{{ topic.title }}</h3>
+          <p>{{ topic.excerpt | strip_html | truncate: 100 }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="latest-posts">
+  <div class="container">
+    <h2>Latest Articles</h2>
+    <div class="posts-grid">
+      {% for post in site.posts limit:3 %}
+        <article class="post-card">
+          <div class="post-date">{{ post.date | date: "%b %d, %Y" }}</div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+          <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
+        </article>
+      {% endfor %}
+    </div>
+    <div class="view-all">
+      <a href="{{ '/blog/' | relative_url }}" class="btn">View all articles</a>
+    </div>
+  </div>
+</section>
